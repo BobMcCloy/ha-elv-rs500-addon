@@ -1,0 +1,11 @@
+{
+  "name": "Mein ELV Add-ons",
+  "url": "https://github.com/BobMcCloy/ha-elv-rs500-addon",
+  "maintainer": "IhrGitHubName",
+  "addons": [
+    {
+      "name": "ELV RS500 Reader",
+      "url": "https://github.com/BobMcCloy/ha-elv-rs500-addon/tree/main/rs500_addon"
+    }
+  ]
+}
