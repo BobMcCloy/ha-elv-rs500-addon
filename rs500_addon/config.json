@@ -1,24 +1,25 @@
 {
-  "name": "ELV RS500 Reader",
+  "name": "ELV RS500",
   "version": "1.0.0",
-  "slug": "elv_rs500_reader",
-  "description": "Reads data from ELV RS500 climate station via USB HID and sends it to Home Assistant via MQTT.",
-  "arch": ["aarch64", "amd64"],
-  "url": "https://github.com/BobMcCloy/ha-elv-rs500-addon",
+  "slug": "elv-rs500",
+  "description": "Reads data from the ELV RS500 weather station",
+  "arch": [
+    "aarch64",
+    "amd64"
+  ],
   "startup": "application",
   "boot": "auto",
-  "host_network": true,
   "usb": true,
+  "host_network": true,
+  "udev": true,
   "options": {
     "mqtt_host": "homeassistant.local",
-    "mqtt_user": "homeassistant",
+    "mqtt_user": "#",
     "mqtt_password": ""
   },
   "schema": {
     "mqtt_host": "str",
     "mqtt_user": "str",
     "mqtt_password": "str"
-  },
-  "map_options": true,
-  "image": "ghcr.io/BobMcCloy/ha-elv-rs500-addon-{arch}"
+  }
 }
