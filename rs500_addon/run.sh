@@ -1,4 +1,7 @@
 #!/usr/bin/with-contenv sh
-# Führt das Python-Skript aus
-echo "Starte ELV RS500 Reader..."
-python3 /app/rs500_reader.py
+
+echo "Applying udev rules..."
+udevadm control --reload-rules && udevadm trigger
+
+echo "Starting ELV RS500 Reader..."
+python3 /app/raumklima.py
